@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>SUBMIT TEXT TO FIREBASE</title>
+    <script type="text/javascript" src="http://js.nicedit.com/nicEdit-latest.js"></script>
+    <script type="text/javascript" src="https://www.gstatic.com/firebasejs/3.9.0/firebase.js"></script>
+  </head>
+  <body>
+
+    <div id="sample">
+
+      <script type="text/javascript">
+            bkLib.onDomLoaded(function() { nicEditors.allTextAreas() });
+      </script>
+
+      <h4>
+        Third Textarea
+      </h4>
+      <textarea class="post-content" id="#post-content" name="area3" style="width: 300px; height: 100px;">
+           HTML content default in textarea
+    </textarea>
+    <button name="button" id="submit-button"/>SUBMIT</button>
+    </div>
+
+
+
+<script>
+var url = "https://sethtest-8521c.firebaseio.com/";
+
+  var config = {
+    apiKey: "AIzaSyBb26SOvM3fvAKgKSOwgVvcV2azXbbbFFw",
+    authDomain: "sethtest-8521c.firebaseapp.com",
+    databaseURL: "https://sethtest-8521c.firebaseio.com",
+    projectId: "sethtest-8521c",
+    storageBucket: "sethtest-8521c.appspot.com",
+    messagingSenderId: "62755494741"
+  };
+  firebase.initializeApp(config);
+
+var firebaseRef = new Firebase("https://sethtest-8521c.firebaseio.com/");
+
+function funct1(evt)
+{
+  var title = "My Post";//$('#post-title').text();
+
+  var post = $('#post-content').text();
+
+  var date = Date();
+
+  firebaseRef.set({Title: title, Content: post, Date: date});
+  evt.preventDefault();
+}
+
+var submit = document.getElementsByTagName("button")[0];
+
+submit.onclick = funct1;
+
+</script>
+
+</body>
+</html>
