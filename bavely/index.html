@@ -1,64 +1,66 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>test</title>
+	<title>SignUp/Signin Page</title>
 	<script src="https://www.gstatic.com/firebasejs/3.9.0/firebase.js"></script>
-
-<script src="https://www.gstatic.com/firebasejs/3.9.0/firebase-app.js"></script>
-<script src="https://www.gstatic.com/firebasejs/3.9.0/firebase-auth.js"></script>
-<script src="https://www.gstatic.com/firebasejs/3.9.0/firebase-database.js"></script>
-
-<script src="https://cdn.firebase.com/libs/firebaseui/1.0.1/firebaseui.js"></script>
-<link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/1.0.1/firebaseui.css" />
-
-
+	<script src="https://www.gstatic.com/firebasejs/3.9.0/firebase-app.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/3.9.0/firebase-auth.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/3.9.0/firebase-database.js"></script>
+	<link href="https://cdn.quilljs.com/1.0.0/quill.snow.css" rel="stylesheet">
+	<script src="https://cdn.quilljs.com/1.0.0/quill.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-	<script src="md5.min.js"></script>
-	<!-- Latest compiled and minified CSS -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="texteditor.css">
 </head>
 <body>
-<div class="container-fluid page-header text-center">
-		<h1>Test</h1>
+	<div class="container-fluid page-header text-center">
+		<h1>SignUp/Signin Page</h1>
 	</div>
-<div class="container">
-<div class="row">
-<div class="col-md-6 col-md-offset-3">
-<form class="form-inline">
-  <div class="form-group">
-    <label class="sr-only" for="exampleInputEmail3">Email address</label>
-    <input type="email" class="form-control inemailTest" id="exampleInputEmail3" placeholder="Email">
-  </div>
-  <div class="form-group">
-    <label class="sr-only" for="exampleInputPassword3">Password</label>
-    <input type="password" class="form-control inpassTest" id="exampleInputPassword3" placeholder="Password">
-  </div>
-  <div class="checkbox">
-    <label>
-      <input type="checkbox"> Remember me
-    </label>
-  </div>
-  <button type="submit" class="btn btn-default test">Sign in</button>
-  <button type="submit" class="btn btn-default signOut">Sign Out</button>
-</form>
-</div>
-</div>
-<div class="row">
-<div class="col-md-6 col-md-offset-3">
-<form>
-  <div class="form-group">
-    <label for="exampleInputEmail1">Email address</label>
-    <input type="email" class="form-control upTestemail" id="exampleInputEmail1" placeholder="Email">
-  </div>
-  <div class="form-group">
-    <label for="exampleInputPassword1">Password</label>
-    <input type="password" class="form-control upTestpass" id="exampleInputPassword1" placeholder="Password">
-  </div>
-  <button type="submit" class="btn btn-default upTest">Submit</button>
-</form>
-</div>
-</div>
-</div>
-<script type="text/javascript" src="app.js"></script>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-6 col-md-offset-3">
+				<form class="form-inline">
+					<div class="form-group">
+						<label class="sr-only" for="exampleInputEmail3">Email address</label>
+    				<input type="email" class="form-control inemailTest" id="exampleInputEmail3" placeholder="Email">
+					</div>
+					<div class="form-group">
+						<label class="sr-only" for="exampleInputPassword3">Password</label>
+    				<input type="password" class="form-control inpassTest" id="exampleInputPassword3" placeholder="Password">
+					</div>
+				  <div class="checkbox">
+    				<label>
+      				<input type="checkbox"> Remember me
+    				</label>
+  				</div>
+  				<button type="submit" class="btn btn-default test">Sign in</button>
+  				<br>
+  				<a class="fP" href="fP.html">forget my password</a>
+				</form>
+			</div>
+		</div>
+		<div class="message"></div>
+		<div class="row">
+			<div class="col-md-6 col-md-offset-3">
+				<form>
+  				<div class="form-group">
+    				<label for="exampleInputEmail1">Email address</label>
+    				<input type="email" class="form-control upTestemail" id="exampleInputEmail1" placeholder="Email">
+  				</div>
+    			<div class="form-group">
+    				<label for="userName1">User Name</label>
+    				<input type="text" class="form-control upTestname" id="userName1" placeholder="User Name">
+  				</div>
+  				<div class="form-group">
+    				<label for="exampleInputPassword1">Password</label>
+    				<input type="password" class="form-control upTestpass" id="exampleInputPassword1" placeholder="Password">
+  				</div>
+  				<button type="submit" class="btn btn-default upTest">Submit</button>
+				</form>
+
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript" src="app.js"></script>
 </body>
 </html>
