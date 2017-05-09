@@ -1,96 +1,69 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-	<title>notepadbook</title>
-
-	<link rel="stylesheet" type="text/css" href="assets/css/reset.css">
-
-	<!-- Latest compiled and minified CSS -->
-	
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-
-	<!-- Optional theme -->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
-	<style type="text/css">
-	
-		#login{
-			display: none;
-
-		}
-
-		p{
-			color: red;
-		}
-		#body1{
-			height: 90%;
-		}
-		#facefeed{
-			display: none;
-		}
-	</style>
-
+    <title>SignUp/SignIn Page</title>
+    <script src="https://www.gstatic.com/firebasejs/3.9.0/firebase.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/3.9.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/3.9.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/3.9.0/firebase-database.js"></script>
+    <link href="https://cdn.quilljs.com/1.0.0/quill.snow.css" rel="stylesheet">
+    <script src="https://cdn.quilljs.com/1.0.0/quill.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="texteditor.css">
 </head>
+
 <body>
-
-<div id="login" class="container">
-	<div class="row">
-		<div class="col-sm-4" style="background-color: yellow ">
-			<p>Sign In</p>
-			<hr>
-			<br>
-			<p>Username</p>
-    		<div class="row">
-      			<input id="user" type="text"  placeholder="username">				
-			</div>
-			<p>Password</p>
-			<div class="row">
-      			<input id="pass" type="text"  placeholder="password">				
-			</div>
-			<button type="submit" class="btn btn-warning">Signin</button><button type="submit" class="btn btn-danger">Signup</button>
-			<br>
-			<a href="">Forgot your password</a>
-
-
-	</div>
-	
-</div>
-</div>
-
-<div id="body1" class="container">
-	<div class="row">
-		<div class="col-md-9" style="background-color: blue">
-		<p>my notebook</p>
-		<div class="jumbotron">
-          <h1>Hello, world!</h1>
-          <p>textinput here</p>
-          <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a></p>
-        
-    		
-      			<input type="text" class="form-control" placeholder="text here...">
-      			<span class="input-group-btn">
-        		<button class="btn btn-default" type="button">submit</button>
-      			</span>
-    		
+    <div class="container-fluid page-header text-center">
+        <h1>SignUp/Signin Page</h1>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 col-md-offset-3">
+                <form class="form-inline">
+                    <div class="form-group">
+                        <label class="sr-only" for="exampleInputEmail3">Email address</label>
+                        <input type="email" class="form-control inemailTest" id="exampleInputEmail3" placeholder="Email">
+                    </div>
+                    <div class="form-group">
+                        <label class="sr-only" for="exampleInputPassword3">Password</label>
+                        <input type="password" class="form-control inpassTest" id="exampleInputPassword3" placeholder="Password">
+                    </div>
+                    <div class="checkbox">
+                        <label>
+      				<input type="checkbox"> Remember me
+    				</label>
+                    </div>
+                    <button type="submit" class="btn btn-default test">Sign in</button>
+                    <br>
+                    <a class="fP" href="fP.html">forget my password</a>
+                </form>
+            </div>
         </div>
+        <div class="message"></div>
+        <div class="row">
+            <div class="col-md-6 col-md-offset-3">
+                <form>
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Email address</label>
+                        <input type="email" class="form-control upTestemail" id="exampleInputEmail1" placeholder="Email">
+                    </div>
+                    <div class="form-group">
+                        <label for="userName1">User Name</label>
+                        <input type="text" class="form-control upTestname" id="userName1" placeholder="User Name">
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputPassword1">Password</label>
+                        <input type="password" class="form-control upTestpass" id="exampleInputPassword1" placeholder="Password">
+                    </div>
+                    <button type="submit" class="btn btn-default upTest">Submit</button>
+                </form>
 
-			
-		</div>
-		<div id="facefeed" class="col-md-3" style="background-color: yellow">
-		<p>feed</p>
-		<hr>
-		<div class="jumbotron">
-  			
-  			<p>facebook feed here</p>
-  			<p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a></p>
-	    </div>
-			
-		</div>
-	</div>
-	
-</div>
-
-
-	
-</div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="app.js"></script>
 </body>
+
 </html>

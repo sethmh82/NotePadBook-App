@@ -29,16 +29,16 @@ $(document).ready(function () {
     if (user) {
       firebase.auth().currentUser.sendEmailVerification().then(function() {
         // Email sent.
-        $(".message").html("done");
+        $(".message").html("ACCOUNT CREATED. YOU CAN NOW LOGIN.");
       }, function(error) {
         // An error happened.
-        $(".message").html("please check your email!");
+        $(".message").html("PLEASE CHECK YOUR EMAIL!");
       });
       var displayName =$(".upTestname").val();
     	var  currentUser = firebase.auth().currentUser;
     	currentUser.updateProfile({
     	displayName: displayName,
-    	photoURL: 'https://static.wixstatic.com/media/745f4f_518640ca13a1467baca18fe6181ea912~mv2.png/v1/fill/w_190,h_190,al_c,usm_0.66_1.00_0.01/745f4f_518640ca13a1467baca18fe6181ea912~mv2.png'
+    	photoURL: 'assets/img/avatar.jpg'
     	}).then(function() {
     // Update successful.
     	}, function(error) {
@@ -51,7 +51,7 @@ $(document).ready(function () {
     	var uid = user.uid;
     	var providerData = user.providerData;
     	$(".userName").html(user.displayName);
-    	$(".userName").append("<img src='photoURL'>");
+    	$(".userName").append("<img class='avimg' src='assets/img/avatar.jpg'>");
       localStorage.clear();
 			localStorage.setItem("key", uid);
 			localStorage.setItem("name", user.displayName);
@@ -104,7 +104,7 @@ $(document).ready(function () {
 			var uid = user.uid;
 			var providerData = user.providerData;
 			$(".userName").html(user.displayName);
-			$(".userName").append("<img src='photoURL'>");
+			$(".userName").append("<img style='margin-left:15px;' class='avimg' src='assets/img/avatar.jpg'>");
 			console.log(user);
 			console.log(uid);
 			firebase.database().ref().child(uid);
