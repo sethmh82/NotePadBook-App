@@ -24,6 +24,7 @@ $(document).ready(function() {
 
 
 
+
     $(".upTest").on("click", function(event) {
 
         event.preventDefault();
@@ -148,8 +149,7 @@ $(document).ready(function() {
 
         event.preventDefault();
         var paragraph = $("<p>");
-        var delta = quill.getContents();
-        var text = quill.getText();
+        var text = $($(".ql-editor").html()).html();
         paragraph.append(text);
         paragraph.addClass("newP");
         $(".textContainer").prepend("<br>");
