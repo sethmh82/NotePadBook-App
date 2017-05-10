@@ -53,7 +53,7 @@ letter-spacing: 1px;
 }
 
 #footer {
-			display: inline-block;
+		display: inline-block;
 	    text-align: center;
 	    margin: 0px;
 	    width: 100%;
@@ -62,8 +62,9 @@ letter-spacing: 1px;
 	    padding-left: 2%;
 	    padding-right: 2%;
 	    height: 30px;
-			font-size: 10px;
-			margin-top:140px;
+		font-size: 10px;
+			position: absolute;
+			bottom: 0;
 }
 
 #logo {
@@ -101,10 +102,10 @@ h1, .h1 {
 }
 
 .btn-default {
-		color: #5a5a5a;
+	color: #5a5a5a;
     background-color: rgba(35, 35, 35, 0.07);
     border-color: rgba(119, 147, 255, 0.39);
-    float: left;
+ 
     font-weight: 400;
     padding-left: 40px;
     padding-right: 40px;
@@ -172,7 +173,11 @@ h1, .h1 {
 	    border-right: 0px solid #d0d0d0;
 	    border-radius: 0px;
 	}
-
+/*	.signOut{
+		position: absolute;
+		left: 410px;
+		top:200px;
+	}*/
 
 
 @media (max-width: 400px) {

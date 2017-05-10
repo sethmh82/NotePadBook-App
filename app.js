@@ -3,12 +3,12 @@ $(document).ready(function() {
 
     // Initialize Firebase
     var config = {
-        apiKey: "AIzaSyCnEFNEYcy2p9EPeD9s2Z3C4VTYBQee2eg",
-        authDomain: "projtest-eb619.firebaseapp.com",
-        databaseURL: "https://projtest-eb619.firebaseio.com",
-        projectId: "projtest-eb619",
-        storageBucket: "projtest-eb619.appspot.com",
-        messagingSenderId: "702305641233"
+    apiKey: "AIzaSyDmTNcqSjIM7tMZ2W0uGfQZYYZPrVzQtKQ",
+    authDomain: "botebook-1891d.firebaseapp.com",
+    databaseURL: "https://botebook-1891d.firebaseio.com",
+    projectId: "botebook-1891d",
+    storageBucket: "botebook-1891d.appspot.com",
+    messagingSenderId: "114219758835"
     };
     firebase.initializeApp(config);
 
@@ -21,7 +21,6 @@ $(document).ready(function() {
     }
 
     //Sign Up.
-
 
 
 
@@ -137,7 +136,7 @@ $(document).ready(function() {
     var theKey = localStorage.getItem("key");
     firebase.database().ref("/" + theKey).orderByChild("dateAdded").limitToLast(10).on("child_added", function(snapshot) {
         $(".textContainer").prepend(snapshot.val().text);
-        $(".textContainer").prepend("<br>");
+        // $(".textContainer").prepend("<br>");
     });
 
     var theName = localStorage.getItem("name");
@@ -148,11 +147,12 @@ $(document).ready(function() {
     $(".save").on("click", function(event) {
 
         event.preventDefault();
-        var paragraph = $("<p>");
-        var text = $($(".ql-editor").html()).html();
-        paragraph.append(text);
-        paragraph.addClass("newP");
-        $(".textContainer").prepend("<br>");
+        // var paragraph = $("<p>");
+        var delta = quill.getContents();
+        var text = $(".ql-editor").html();
+        // $(".textContainer").append(text);
+        // $(".textContainer").addClass("newP");
+        // $(".textContainer").prepend("<br>");
         var theKey = localStorage.getItem("key");
         firebase.database().ref("/" + theKey).push({
             text: text,
