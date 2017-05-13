@@ -6,13 +6,29 @@ html, body {
 
 
 @import url('https://fonts.googleapis.com/css?family=Amatic+SC');
+.facebookFeed{
+
+	height: 100px;
+    background-color: #F1F1F2;
+    padding: 10px;
+    z-index: 0;
+
+
+}
+
+h3 {
+
+border-bottom: solid 2px;
+padding-bottom:5px; 
+    margin-top: -5px;
+}
 
 
 .textContainer{
 	font-size: 20px;
 	float: inherit;
 	margin-top: 4px;
- font-family: 'Amatic SC', cursive;
+ font-family: Raleway, Helvetica, Arial, Sans-Serif;
 }
 
 
@@ -49,7 +65,7 @@ letter-spacing: 1px;
 
 #avimg {
     vertical-align: middle;
-    width: 100px;
+    width: 38px;
 }
 
 #footer {
@@ -104,7 +120,6 @@ h1, .h1 {
 		color: #5a5a5a;
     background-color: rgba(35, 35, 35, 0.07);
     border-color: rgba(119, 147, 255, 0.39);
-    float: left;
     font-weight: 400;
     padding-left: 40px;
     padding-right: 40px;
@@ -190,4 +205,11 @@ h1, .h1 {
     width: 100%;
 		margin-bottom:10px;
 }
+}
+
+.deletebox{
+
+	position: relative;
+    left: 387px;
+    top: 29px;
 }
