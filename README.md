@@ -1,2 +1,8 @@
-# team-a-my-notebook
-A notebook for your Facebook and Twitter feeds
+# NotePadBook
+UCI Team Project
+
+Developed by:
+Bavely
+Cameron
+Mehdi
+Seth
